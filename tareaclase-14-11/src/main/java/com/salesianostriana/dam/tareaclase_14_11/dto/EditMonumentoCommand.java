@@ -1,8 +1,7 @@
 package com.salesianostriana.dam.tareaclase_14_11.dto;
 
-public record NewMonumentoCommand(
+public record EditMonumentoCommand(
 
-        Long id,
      String codigoPais,
      String nombrePais,
      String nombreCiudad,

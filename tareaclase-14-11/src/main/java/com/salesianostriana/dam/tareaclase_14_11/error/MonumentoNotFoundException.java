@@ -1,5 +1,8 @@
 package com.salesianostriana.dam.tareaclase_14_11.error;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 public class MonumentoNotFoundException extends  RuntimeException{
     public MonumentoNotFoundException(String message) {super(message);}
 

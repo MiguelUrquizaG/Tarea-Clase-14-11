@@ -1,18 +1,17 @@
 package com.salesianostriana.dam.tareaclase_14_11.controller;
 
-import com.salesianostriana.dam.tareaclase_14_11.dto.NewMonumentoCommand;
+import com.salesianostriana.dam.tareaclase_14_11.dto.EditMonumentoCommand;
 import com.salesianostriana.dam.tareaclase_14_11.model.Monumento;
 import com.salesianostriana.dam.tareaclase_14_11.services.MonumentoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/monumento/")
+@RequestMapping("/monumento")
 @RequiredArgsConstructor
 public class MonumentoController {
 
@@ -29,9 +28,20 @@ public class MonumentoController {
     }
 
     @PostMapping
-    public ResponseEntity<Monumento> create(@RequestBody NewMonumentoCommand cmd){
+    public ResponseEntity<Monumento> create(@RequestBody EditMonumentoCommand cmd){
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(monumentoService.save(cmd));
+    }
+
+    @PutMapping("/{id}")
+    public Monumento edit(@RequestBody EditMonumentoCommand cmd, @PathVariable Long id){
+        return monumentoService.edit(cmd,id);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id){
+        monumentoService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 

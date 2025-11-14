@@ -1,9 +1,6 @@
 package com.salesianostriana.dam.tareaclase_14_11.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
@@ -13,7 +10,7 @@ import lombok.*;
 @Entity
 public class Monumento {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String codigoPais;
