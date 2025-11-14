@@ -1,0 +1,12 @@
+2025-11-14 09:50:41.911684+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MONUMENTO" no encontrada
+Table "MONUMENTO" not found; SQL statement:
+select m1_0.id,m1_0.codigo_pais,m1_0.descripcion,m1_0.latitud,m1_0.longitud,m1_0.nombre_ciudad,m1_0.nombre_monumento,m1_0.nombre_pais,m1_0.url_foto from monumento m1_0 [42102-232]
+2025-11-14 09:52:37.670325+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MONUMENTO" no encontrada
+Table "MONUMENTO" not found; SQL statement:
+select m1_0.id,m1_0.codigo_pais,m1_0.descripcion,m1_0.latitud,m1_0.longitud,m1_0.nombre_ciudad,m1_0.nombre_monumento,m1_0.nombre_pais,m1_0.url_foto from monumento m1_0 [42102-232]
+2025-11-14 09:56:44.436543+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MONUMENTO" no encontrada
+Table "MONUMENTO" not found; SQL statement:
+select m1_0.id,m1_0.codigo_pais,m1_0.descripcion,m1_0.latitud,m1_0.longitud,m1_0.nombre_ciudad,m1_0.nombre_monumento,m1_0.nombre_pais,m1_0.url_foto from monumento m1_0 [42102-232]
